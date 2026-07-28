@@ -2,6 +2,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Analytics } from '@vercel/analytics/react';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Detail } from './pages/Detail';
@@ -101,6 +102,7 @@ function App() {
           </Route>
         </Routes>
       </HashRouter>
+      <Analytics />
     </QueryClientProvider>
   );
 }
